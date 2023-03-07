@@ -6,6 +6,7 @@
 </head>
 <body>
   <button id="start-btn">マイクを起動する</button>
+  <p id="result"></p>
   <script>
     // 単語の認識に使用する単語
     const keyword = '抜いた';
@@ -29,6 +30,7 @@
         if (transcript.includes(keyword)) {
           console.log('「抜いた」と認識されました');
           console.log('test');
+          document.getElementById('result').textContent = transcript;
         }
       }
     }
